@@ -1,106 +1,92 @@
 # DataScience
 
-## install Anaconda 
+## Scikit 
 
-conda inatall anaconda-client
-```
-➜  anaconda3 sudo bin/conda install anaconda-client
-[sudo] password for altanai: 
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
+Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection and evaluation, and many other utilities.
 
-## Package Plan ##
+    python3 -m pip show scikit-learn
 
-  environment location: /home/altanai/anaconda3
+Import learn packages
 
-  added / updated specs:
-    - anaconda-client
+    python3 -c "import sklearn; sklearn.show_versions()"
 
+    System:
+        python: 3.6.9 (default, Jan 26 2021, 15:33:00)  [GCC 8.4.0]
+    executable: /usr/bin/python3
+      machine: Linux-4.15.0-136-generic-x86_64-with-Ubuntu-18.04-bionic
 
-The following packages will be downloaded:
+    Python dependencies:
+              pip: 21.1.1
+      setuptools: 56.1.0
+          sklearn: 0.24.2
+            numpy: 1.19.2
+            scipy: 1.5.2
+          Cython: None
+          pandas: 1.0.5
+      matplotlib: 3.3.1
+          joblib: 0.16.0
+    threadpoolctl: 2.1.0
 
-    package                    |            build
-    ---------------------------|-----------------
-    conda-4.8.3                |           py37_0         2.8 MB
-    ------------------------------------------------------------
-                                           Total:         2.8 MB
+    Built with OpenMP: True
 
-The following packages will be UPDATED:
+  
 
-  conda                                        4.8.2-py37_0 --> 4.8.3-py37_0
+## Anaconda 
+installing anaconda
 
+  conda inatall anaconda-client
 
-Proceed ([y]/n)? y
+    ➜  anaconda3 sudo bin/conda install anaconda-client
+    Collecting package metadata (current_repodata.json): done
+    Solving environment: done
 
+    environment location: /home/altanai/anaconda3
+    added / updated specs:
+      - anaconda-client
 
-Downloading and Extracting Packages
-conda-4.8.3          | 2.8 MB    | ################################################################################################################################################################# | 100% 
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-```
+      package                    |            build
+      ---------------------------|-----------------
+      conda-4.8.3                |           py37_0         2.8 MB
+      ------------------------------------------------------------
+                                              Total:         2.8 MB
 
-install anaconda-navogator
-```
-➜  anaconda3 sudo bin/conda install anaconda-navigator
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
+  install anaconda-navigator
 
-## Package Plan ##
+    ➜  anaconda3 sudo bin/conda install anaconda-navigator
+    Collecting package metadata (current_repodata.json): done
+    Solving environment: done
 
-  environment location: /home/altanai/anaconda3
+    environment location: /home/altanai/anaconda3
 
-  added / updated specs:
-    - anaconda-navigator
+    added / updated specs:
+      - anaconda-navigator
 
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    anaconda-navigator-1.9.12  |           py37_1         4.4 MB
-    ------------------------------------------------------------
-                                           Total:         4.4 MB
-
-The following packages will be UPDATED:
-
-  anaconda-navigator                          1.9.12-py37_0 --> 1.9.12-py37_1
-
-
-Proceed ([y]/n)? y
-
-
-Downloading and Extracting Packages
-anaconda-navigator-1 | 4.4 MB    | ################################################################################################################################################################# | 100% 
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-```
+      package                    |            build
+      ---------------------------|-----------------
+      anaconda-navigator-1.9.12  |           py37_1         4.4 MB
+      ------------------------------------------------------------
+                                            Total:         4.4 MB
 
 ## create Virtual Env 
 
-conda create --name <name> python=3.5
+    conda create --name <name> python=3.5
   
 or with pandas 
-conda create --name <name> python=3.5 panda
 
-or with entore anaconda lib
-conda create --name <name> python=3.5 anaconda
+    conda create --name <name> python=3.5 panda
 
-```
-➜  MLDS git:(master) ~/anaconda3/bin/conda create --name snowflakes biopython
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
+or with anaconda lib
+    
+    conda create --name <name> python=3.5 anaconda
 
-## Package Plan ##
+    ➜  MLDS git:(master) ~/anaconda3/bin/conda create --name snowflakes biopython
+    Collecting package metadata (current_repodata.json): done
+    Solving environment: done
 
-  environment location: /home/altanai/anaconda3/envs/snowflakes
+    environment location: /home/altanai/anaconda3/envs/snowflakes
 
-  added / updated specs:
-    - biopython
-
-
-The following packages will be downloaded:
+    added / updated specs:
+      - biopython
 
     package                    |            build
     ---------------------------|-----------------
@@ -129,17 +115,18 @@ The following packages will be downloaded:
     xz-5.2.5                   |       h7b6447c_0         341 KB
     ------------------------------------------------------------
                                            Total:       196.7 MB
-```
 
 see all env 
-```
-➜  MLDS git:(master) ~/anaconda3/bin/conda info --envs        
-# conda environments:
-#
-base                  *  /home/altanai/anaconda3
-snowflakes               /home/altanai/anaconda3/envs/snowflakes
-```
+
+    ➜  MLDS git:(master) ~/anaconda3/bin/conda info --envs        
+    # conda environments:
+    #
+    base                  *  /home/altanai/anaconda3
+    snowflakes               /home/altanai/anaconda3/envs/snowflakes
+
 Procced to activate or deactivate 
 
 
-ref : https://docs.anaconda.com/anaconda-cloud/user-guide/getting-started/#finding-downloading-and-installing-packages
+**References**  : 
+- https://docs.anaconda.com/anaconda-cloud/user-guide/getting-started/#finding-downloading-and-installing-packages
+- https://scikit-learn.org/stable/install.html#installation-instructions 
